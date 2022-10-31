@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "COMP2112",
+  "name": "COMP2112 Demo App with React",
   "icons": [
     {
       "src": "favicon.ico",
@@ -22,4 +22,5 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
+
 }
