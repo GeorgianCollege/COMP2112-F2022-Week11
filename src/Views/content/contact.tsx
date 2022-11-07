@@ -13,21 +13,34 @@ function Contact()
 
     function onChangeFullName(e: ChangeEvent<HTMLInputElement>)
     {
+        setFullName(e.target.value);
         console.log(fullName);
     }
 
     function onChangeContactNumber(e: ChangeEvent<HTMLInputElement>)
     {
+        setContactNumber(e.target.value);
         console.log(contactNumber);
     }
 
     function onChangeEmailAddress(e: ChangeEvent<HTMLInputElement>)
     {
+        setEmailAddress(e.target.value);
         console.log(emailAddress);
     }
 
     function onChangeMessage(e: ChangeEvent<HTMLTextAreaElement>)
     {
+        setMessage(e.target.value);
+        console.log(message);
+    }
+
+    function onSubmitForm(e: any)
+    {
+        e.preventDefault();
+        console.log(fullName);
+        console.log(contactNumber);
+        console.log(emailAddress);
         console.log(message);
     }
 
@@ -37,30 +50,30 @@ function Contact()
             <hr/>
 
             <div className="row justify-content-lg-center g-3">
-                <form className="col-lg-8 col-md-6 col-sm-10">
+                <form className="col-lg-8 col-md-6 col-sm-10" onSubmit={onSubmitForm}>
 
 
                     <div className="form-group mb-3">
                         <label htmlFor="fullName">Full Name</label>
-                        <input type="text" className="form-control" id="fullName" name="fullName" onChange={onChangeFullName} 
+                        <input type="text" className="form-control" id="fullName" name="fullName" onChange={onChangeFullName} onBlur={onChangeFullName}
                         aria-describedby="Full Name Input" placeholder="Enter Your Full Name" required/>
                     </div>
 
                     <div className="form-group mb-3">
                         <label htmlFor="contactNumber">Contact Number</label>
-                        <input type="tel" className="form-control" id="contactNumber" name="contactNumber" onChange={onChangeContactNumber} 
+                        <input type="tel" className="form-control" id="contactNumber" name="contactNumber" onChange={onChangeContactNumber} onBlur={onChangeContactNumber}
                         aria-describedby="Contact Number Input" placeholder="Enter Your Contact Number" required/>
                     </div>
 
                     <div className="form-group mb-3">
                         <label htmlFor="emailAddress">Email address</label>
-                        <input type="email" className="form-control" id="emailAddress" name="emailAddress" onChange={onChangeEmailAddress} 
+                        <input type="email" className="form-control" id="emailAddress" name="emailAddress" onChange={onChangeEmailAddress} onBlur={onChangeEmailAddress}
                         aria-describedby="Email Address Input" placeholder="Enter Your Email Address" required/>
                     </div>
                     
                     <div className="form-group mb-3">
                         <label htmlFor="message">Your Message</label>
-                        <textarea className="form-control" id="message" name="message"aria-label="Message Area" onChange={onChangeMessage}></textarea>
+                        <textarea className="form-control" id="message" name="message"aria-label="Message Area" onChange={onChangeMessage} onBlur={onChangeMessage}></textarea>
                     </div>
 
                     <button type="submit" id="submitButton" className="btn btn-primary me-2"><i className="fas fa-envelope fa-lg"></i> Submit</button>
