@@ -12,6 +12,9 @@ import Projects from './Views/content/projects';
 import Services from './Views/content/services';
 import Contact from './Views/content/contact';
 
+// TVShow List Components
+import TVShowsList from './Views/tvshows-list/tvshows-list';
+
 // Styles and fonts
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
@@ -34,6 +37,7 @@ function App() {
             <Route path="/projects" element={<Projects />}></Route>
             <Route path="/services" element={<Services />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/tvshows-list" element={<TVShowsList />}></Route>
           </Routes>
         <Footer></Footer>
       </BrowserRouter>
