@@ -27,6 +27,10 @@ function Header()
                 <li className="nav-item">
                     <NavLink to={"/contact"} className="nav-link" id="Contact"  aria-current="page"><i className="fa-solid fa-envelope fa-lg"></i> Contact Us</NavLink>
                 </li>
+
+                <li className="nav-item">
+                    <NavLink to={"/tvshows-list"} className="nav-link" id="TVShows"  aria-current="page"><i className="fa-solid fa-film fa-lg"></i> TV Shows List</NavLink>
+                </li>
                 </ul>
             </div>
             </div>
