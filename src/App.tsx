@@ -28,8 +28,8 @@ function App() {
       <BrowserRouter>
         <Header></Header>
           <Routes>
-            <Route path="/" element={<Home username ='rfreeman' displayName='Rich Freeman' />}></Route>
-            <Route path="/home" element={<Home username ='rfreeman' displayName='Rich Freeman' />}></Route>
+            <Route path="/" element={<Home username ='ataylor' displayName='Alex Taylor' />}></Route>
+            <Route path="/home" element={<Home username ='ataylor' displayName='Alex Taylor' />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/projects" element={<Projects />}></Route>
             <Route path="/services" element={<Services />}></Route>
