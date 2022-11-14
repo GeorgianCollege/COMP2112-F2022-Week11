@@ -1,9 +1,9 @@
 {
-  "name": "comp2112-f2022-week9",
-  "version": "0.2.0",
+  "name": "comp2112-f2022-week10",
+  "version": "0.3.0",
   "description": "Demo React app for COMP2112 in the Fall 2022 Semester at Georgian College",
   "main": "index.js",
-  "repository": "https://github.com/GeorgianCollege/COMP2112-F2022-Week9.git",
+  "repository": "https://github.com/GeorgianCollege/COMP2112-F2022-Week10.git",
   "author": "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>",
   "license": "MIT",
   "private": true,
