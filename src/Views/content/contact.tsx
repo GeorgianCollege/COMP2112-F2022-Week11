@@ -9,30 +9,28 @@ function Contact()
 
     useEffect(() =>{
         document.title = "Contact";
+
+        console.log("effect: fullName or contactNumber changed");
     },[]);
 
     function onChangeFullName(e: ChangeEvent<HTMLInputElement>)
     {
         setFullName(e.target.value);
-        console.log(fullName);
     }
 
     function onChangeContactNumber(e: ChangeEvent<HTMLInputElement>)
     {
         setContactNumber(e.target.value);
-        console.log(contactNumber);
     }
 
     function onChangeEmailAddress(e: ChangeEvent<HTMLInputElement>)
     {
         setEmailAddress(e.target.value);
-        console.log(emailAddress);
     }
 
     function onChangeMessage(e: ChangeEvent<HTMLTextAreaElement>)
     {
         setMessage(e.target.value);
-        console.log(message);
     }
 
     function onSubmitForm(e: any)

@@ -1,4 +1,4 @@
-import http from './http-common';
+import http from './axios-instance';
 import TVShow from '../Models/TVShow';
 
 class TVShowListDataService
