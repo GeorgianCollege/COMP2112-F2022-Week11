@@ -4,6 +4,10 @@ import TVShow from '../Models/TVShow';
 class TVShowListDataService
 {
     // create
+    public create(data: TVShow)
+    {
+        return http.post<TVShow>("TVShows.json", data);
+    }
 
     // read
     public read()
