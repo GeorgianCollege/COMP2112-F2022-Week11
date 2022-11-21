@@ -8,7 +8,7 @@ class TVShowListDataService
     // read
     public read()
     {
-        return http.get<Array<TVShow>>("");
+        return http.get<Array<TVShow>>("TVShows.json");
     }
 
     // update
