@@ -14,6 +14,7 @@ import Contact from './Views/content/contact';
 
 // TVShow List Components
 import TVShowsList from './Views/tvshows-list/tvshows-list';
+import AddTVShow from './Views/tvshows-list/add';
 
 // Styles and fonts
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -38,6 +39,7 @@ function App() {
             <Route path="/services" element={<Services />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/tvshows-list" element={<TVShowsList />}></Route>
+            <Route path="/add" element={<AddTVShow />}></Route>
           </Routes>
         <Footer></Footer>
       </BrowserRouter>
