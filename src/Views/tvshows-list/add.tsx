@@ -8,6 +8,7 @@ function AddTVShow()
 {
     const [title, setTitle] = useState('');
     const [studio, setStudio] = useState('');
+    const navigate = useNavigate(); // alias - only for convenience
 
     useEffect(()=>{
         document.title = "Add TV Show";
@@ -23,9 +24,25 @@ function AddTVShow()
         setStudio(event.target.value);
     }
 
-    function saveTVShow()
+    function saveTVShow(event: any)
     {
+        event.preventDefault();
+        const data: TVShow = {
+            title: title,
+            studio: studio
+        }
 
+        TVShowListDataService.create(data, "2")
+        .then((response: any)=>{
+            setTitle(response.data.title);
+            setStudio(response.data.studio);
+        })
+        .catch((e: Error) =>{
+            console.log(e);
+        });
+
+        navigate("/tvshows-list");
+       // window.location.reload();
     }
 
     return(
