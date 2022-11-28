@@ -28,21 +28,14 @@ function AddTVShow()
     {
         event.preventDefault();
         const data: TVShow = {
+            id: title.substring(0, 1)+ studio.substring(0, 1) + Date.now(),
             title: title,
             studio: studio
         }
-
-        TVShowListDataService.create(data, "2")
-        .then((response: any)=>{
-            setTitle(response.data.title);
-            setStudio(response.data.studio);
-        })
-        .catch((e: Error) =>{
-            console.log(e);
-        });
-
-        navigate("/tvshows-list");
-       // window.location.reload();
+        
+        console.log(data);
+        TVShowListDataService.create(data.id.toString(), data);
+        window.location.href = "/tvshows-list";
     }
 
     return(
@@ -69,7 +62,7 @@ function AddTVShow()
 
                     <button id="addButton" type="submit" className="btn btn-primary me-3">
                         <i className="fa-solid fa-circle-plus"></i> Add</button>
-                    <Link to={"/tvshow-list"} id="cancelButton" type="button" className="btn btn-warning">
+                    <Link to={"/tvshows-list"} id="cancelButton" type="button" className="btn btn-warning">
                         <i className="fa-solid fa-rotate-left"></i> Cancel</Link>
                 </form>
             </div>

@@ -1,21 +1,18 @@
 import http from './axios-instance';
 import TVShow from '../Models/TVShow';
-import { db } from './firebase-config';
-import { ref, set } from 'firebase/database';
 
 class TVShowListDataService
 {
     // create
-    public create(data: TVShow, id: string)
+    public create(id: string, data: TVShow)
     {
-        let dataPath = ref(db, "TVShows/" + id);
-        return set(dataPath, data);
+        return http.put<any>("/TVShows/" + id + ".json", data);
     }
 
     // read
     public read()
     {
-        return http.get<Array<TVShow>>("TVShows.json");
+        return http.get<Array<any>>("TVShows.json");
     }
 
     // update
